@@ -2,8 +2,8 @@ import json
 import random
 
 class Word:
-    
-    def __init__(self, filename, difficulty):
+
+    def __init__(self, difficulty):
         with open("word_bank.json","r") as file:
             word_bank = json.load(file)
             input_from_file = file.read()
@@ -14,9 +14,8 @@ class Word:
 
         if difficulty == "easy":
             self.word = easy_list(random.randint(0,50))
-        if difficulty == "medium":
-            self.word = medium_list(random.randint(51,101))
-        if difficulty == "hard":
-            self.word = hard_list(random.randint(103,127)) 
-
-
+        elif difficulty == "medium":
+            self.word = medium_list(random.randint(51,102))
+        elif difficulty == "hard":
+            self.word = hard_list(random.randint(103,125)) 
+        return self.word
