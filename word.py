@@ -12,10 +12,10 @@ class Word:
         medium_list = json.object["word_list_medium"]
         hard_list = json.object["word_list_hard"]
 
-        if difficulty == "easy":
+        if difficulty == "e":
             self.word = easy_list(random.randint(0,50))
-        elif difficulty == "medium":
+        elif difficulty == "m":
             self.word = medium_list(random.randint(51,102))
-        elif difficulty == "hard":
+        elif difficulty == "h":
             self.word = hard_list(random.randint(103,125)) 
         return self.word
