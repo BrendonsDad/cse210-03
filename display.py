@@ -1,2 +1,2 @@
 class Display:
-    screen = []
+    def __init__(self, ):
