@@ -4,7 +4,7 @@ from word import Word
 class Score:
     def __init__(self,score,letter,word):
         self._score = score
-        self.current_score = 4
+        self.current_score = score
         self.sub_lives = -1
         self.letter = letter
         self.word = word
@@ -28,6 +28,13 @@ class Score:
             if self.word[i] == self.letter:
                 self.index.append(i)
         return self.index
+
+    def return_progress(self, progress, letter):
+        for i in range(len(self.word)):
+            if self.word[i] == letter:
+                progress[i] = letter
+        return progress
+
 
         # check a letter to see if its in word class
         # pass in get the letter and the word
