@@ -17,12 +17,14 @@ class Score:
             return self.sub_lives + self.current_score 
 
 
+    ## check if a letter is in the word class
     def check_letter(self):
         for i in self.word:
            if i == self.letter:
                return True
         return False
 
+    ## tell which index of the letters
     def letter_index(self):
         for i in range(len(self.word)):
             if self.word[i] == self.letter:
