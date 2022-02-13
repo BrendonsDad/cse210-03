@@ -30,7 +30,7 @@ class Director:
 
         word = Word(difficulty= difficulty)
         random_word = word.word
-        player = Director(word=word, lives=4)
+        player = Director(random_word, lives=4)
 
         while player.lives > 0:
             self.display(player.lives, )

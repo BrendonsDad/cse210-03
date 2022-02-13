@@ -4,7 +4,7 @@ from word import Word
 class Score:
     def __init__(self,score,letter,word):
         self._score = score
-        self.current_score = 5
+        self.current_score = 4
         self.sub_lives = -1
         self.letter = letter
         self.word = word
