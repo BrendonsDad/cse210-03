@@ -4,7 +4,7 @@ from word import Word
 class Score:
     def __init__(self,score,letter,word):
         self._score = score
-        self.current_score = 5
+        self.current_score = 4
         self.sub_lives = -1
         self.letter = letter
         self.word = word
@@ -17,26 +17,16 @@ class Score:
             return self.sub_lives + self.current_score 
 
 
+    ## check if a letter is in the word class
     def check_letter(self):
         for i in self.word:
            if i == self.letter:
                return True
         return False
 
+    ## tell which index of the letters
     def letter_index(self):
         for i in range(len(self.word)):
             if self.word[i] == self.letter:
                 self.index.append(i)
         return self.index
-
-        # check a letter to see if its in word class
-        # pass in get the letter and the word
-        # which index of the letter
-        # guess is connected to score
-        # score is connected to display
-
-        # 5 lives
-
-        # if guess is correct the letter is revealed.
-
-        #if guess is incorrect, a line on a player parachute is cut.
