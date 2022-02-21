@@ -24,7 +24,7 @@ class Director:
             difficulty = 'h'
         else:
             print("Becuase you can't follow simple instructions, we'll put \n you on easy...")
-            first_display = '_ _ _ _ _'
+            first_display = ['_',' _',' _',' _',' _']
             difficulty = 'e'
 
         word = Word()
